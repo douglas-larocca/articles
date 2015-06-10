@@ -7,7 +7,6 @@ from rdflib.parser import StringInputSource
 from os.path import join as pjoin
 from .protect import cstring
 
-
 test_dois = ('10.1016/0097-3165(79)90023-2', 
              '10.1002/rsa.3240010202', 
              '10.1016/0095-8956(71)90029-3', 
