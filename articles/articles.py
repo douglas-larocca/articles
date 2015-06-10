@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 from urllib.parse import urljoin
 from rdflib import Graph, RDF, URIRef, Literal, plugin
@@ -36,7 +37,7 @@ class BibItem(IPythonPDF):
     def __init__(self, *args, **kwargs):
         identifier = URIRef('doi')
         self.store = plugin.get('SQLAlchemy', Store)(identifier=identifier)
-        self.graph = Graph(store, identifier=identifier)
+        self.graph = Graph(self.store, identifier=identifier)
         self.graph.open(cstring, create=True)
 
 

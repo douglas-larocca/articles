@@ -16,13 +16,14 @@ from articles import articles
 class TestArticles(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.doi = articles.test_dois[0]
+        self.assertGreater(len(self.doi), 0)
 
-    def test_something(self):
-        pass
+    def test_articles(self):
+        self.doc = articles.DOI(self.doi)
 
     def tearDown(self):
-        pass
+        self.doc.graph.close()
 
 if __name__ == '__main__':
     unittest.main()

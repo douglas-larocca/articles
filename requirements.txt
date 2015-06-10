@@ -1,5 +1,6 @@
 wheel==0.23.0
-rdflib==4.2.0
-rdflib-sqlalchemy==0.2.dev0
 SQLAlchemy==1.0.4
+psycopg2
 requests==2.5.1
+rdflib==4.2.0
+-e git+https://github.com/RDFLib/rdflib-sqlalchemy.git#egg=rdflib-sqlalchemy
