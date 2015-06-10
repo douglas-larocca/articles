@@ -8,14 +8,17 @@ except ImportError:
     from distutils.core import setup
 
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
+    'rdflib==4.2.0',
+    'rdflib-sqlalchemy==0.2.dev0',
+    'SQLAlchemy==1.0.4',
+    'requests==2.5.1',
 ]
 
 test_requirements = [
@@ -25,7 +28,7 @@ test_requirements = [
 setup(
     name='articles',
     version='0.0.1',
-    description="find, download, manage articles",
+    description="",
     long_description=readme + '\n\n' + history,
     author="Douglas La Rocca",
     author_email='douglarocca@gmail.com',
